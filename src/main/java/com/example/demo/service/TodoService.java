@@ -22,7 +22,13 @@ public class TodoService {
 		return todoMapper.getTodo(id);
 	}
 	
-	public void addTodo(TodoWithoutId TodoWithoutId) {
-		todoMapper.addTodo(TodoWithoutId);
+	public void addTodo(TodoWithoutId todoWithoutId) {
+		todoMapper.addTodo(todoWithoutId);
+	}
+	
+	
+	
+	public void deleteTodo(String id) {
+		todoMapper.deleteTodo(id);
 	}
 }

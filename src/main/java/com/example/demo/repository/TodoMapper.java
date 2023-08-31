@@ -15,4 +15,8 @@ public interface TodoMapper {
 	public List<Todo> getTodo(String id);
 
 	public void addTodo(TodoWithoutId TodoWithoutId);
+	
+	
+	
+	public void deleteTodo(String id);
 }

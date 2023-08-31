@@ -27,10 +27,10 @@
 		#{id}
 	</update>
 
-	<delete id="delete" parameterType="com.example.demo.entity.Todo">
-		DELETE FROM todo_items
+	<delete id="deleteTodo" parameterType="com.example.demo.entity.Todo">
+		DELETE FROM todos
 		WHERE
-		done_flg = 1
+		id = #{id}
 	</delete>
 
 </mapper>
