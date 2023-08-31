@@ -11,4 +11,5 @@ public interface TodoMapper {
 	
 	List<Todo> getAllTodos();
 
+	List<Todo> getTodo(String id);
 }

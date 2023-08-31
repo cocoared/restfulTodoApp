@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repository.TodoMapper">
+	<select id="getAllTodos"
+		resultType="com.example.demo.entity.Todo">
+		SELECT * FROM todos
+	</select>
+
+	<select id="getAllTodos"
+		resultType="com.example.demo.entity.Todo">
+		SELECT * FROM todos WHERE id = #{id}
+	</select>
+
+	<insert id="add" parameterType="com.example.demo.entity.Todo">
+		INSERT INTO todos
+		(title,time_limit)
+		VALUES (#{title},#{time_limit})
+	</insert>
+
+	<update id="update" parameterType="com.example.demo.entity.Todo">
+		UPDATE todos
+		SET title =
+		#{title},
+		time_limit = #{time_limit},
+		done_flg = #{done_flg}
+		WHERE id =
+		#{id}
+	</update>
+
+	<delete id="delete" parameterType="com.example.demo.entity.Todo">
+		DELETE FROM todo_items
+		WHERE
+		done_flg = 1
+	</delete>
+
+</mapper>
