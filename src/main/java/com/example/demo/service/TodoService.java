@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Todo;
+import com.example.demo.entity.TodoWithoutId;
 import com.example.demo.repository.TodoMapper;
 
 @Service
@@ -19,5 +20,9 @@ public class TodoService {
 
 	public List<Todo> getTodo(String id) {
 		return todoMapper.getTodo(id);
+	}
+	
+	public void addTodo(TodoWithoutId TodoWithoutId) {
+		todoMapper.addTodo(TodoWithoutId);
 	}
 }

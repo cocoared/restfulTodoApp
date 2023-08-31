@@ -6,15 +6,15 @@
 		SELECT * FROM todos
 	</select>
 
-	<select id="getAllTodos"
+	<select id="getTodo"
 		resultType="com.example.demo.entity.Todo">
 		SELECT * FROM todos WHERE id = #{id}
 	</select>
 
 	<insert id="add" parameterType="com.example.demo.entity.Todo">
 		INSERT INTO todos
-		(title,time_limit)
-		VALUES (#{title},#{time_limit})
+		(title,Status,details)
+		VALUES (#{title},#{Status},#{details})
 	</insert>
 
 	<update id="update" parameterType="com.example.demo.entity.Todo">
